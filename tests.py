@@ -11,6 +11,7 @@ tests needed to determine if there is some correlation among the data.
 #Importing all necessary librarys
 import pandas as pd
 import numpy as np
+import seaborn as sns
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error, explained_variance_score, max_error, median_absolute_error
@@ -18,6 +19,11 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error, e
 
 pd.set_option('display.max_columns', 20)
 eq_data = pd.read_csv('Japan earthquakes 2001 - 2018.csv')
+
+#Check the data
+
+print(eq_data.head())
+print(eq_data.info())
 
 #Set up the training sets for each case, analyzing 4 columns to use
 
